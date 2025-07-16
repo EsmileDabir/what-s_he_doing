@@ -1,0 +1,86 @@
+ h1,
+ h2,
+ h3 {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ h3 {
+     margin-top: 40px;
+     margin-bottom: -20px;
+ }
+
+ .box {
+
+     border: 2px solid black;
+     height: 250px;
+     width: 250px;
+     margin: 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     font-weight: bold;
+     font-size: 20px;
+
+ }
+
+ .container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ .Coding,
+ .Interview,
+ .Sleeping,
+ .Free {
+
+     border: white;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     position: relative;
+ }
+
+ .Coding {
+     background-color: white;
+     
+ }
+
+ .Interview {
+     background-color: grey;
+     color: white;
+ }
+
+ .Sleeping {
+     background-color: black;
+     color: white;
+ }
+
+ .Free {
+     background-color: blanchedalmond;
+     color: black;
+ }
+
+ .box:hover {
+     transform: scale(1.05);
+     /* Slightly zooms in */
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+     /* Stronger shadow */
+     transition: all 0.3s ease-in-out;
+     /* Smooth animation */
+     cursor: pointer;
+     /* Pointer cursor */
+ }
+
+ .live{
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: red;
+    position-anchor: absolute;
+   top: 10px;     /* adjust as needed */
+    left: 10px;    /* place in top-left */
+ }

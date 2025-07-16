@@ -1,86 +1,100 @@
- h1,
- h2,
- h3 {
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
+/* === Base Typography and Alignment === */
+h1, h2, h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
- h3 {
-     margin-top: 40px;
-     margin-bottom: -20px;
- }
+h3 {
+  margin-top: 40px;
+  margin-bottom: -20px;
+}
 
- .box {
+/* === Main Container for Boxes === */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
 
-     border: 2px solid black;
-     height: 250px;
-     width: 250px;
-     margin: 30px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+/* === Box Styles === */
+.box {
+  height: 250px;
+  width: 250px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+  color: black;
+}
 
-     font-weight: bold;
-     font-size: 20px;
+.box:hover {
+  transform: scale(1.05);
+}
 
- }
+/* === Color Themes === */
+.Coding {
+  background-color: white;
+}
 
- .container {
-     display: flex;
-     justify-content: center;
-     align-items: center;
+.Interview {
+  background-color: grey;
+  color: white;
+}
 
- }
+.Sleeping {
+  background-color: black;
+  color: white;
+}
 
- .Coding,
- .Interview,
- .Sleeping,
- .Free {
+.Free {
+  background-color: blanchedalmond;
+}
 
-     border: white;
-     border-radius: 10px;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-     position: relative;
- }
+/* === Red Live Dot === */
+.live {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
 
- .Coding {
-     background-color: white;
-     
- }
+/* === Responsive: Tablets (≤ 768px) === */
+@media (max-width: 768px) {
+  .box {
+    width: 45%;
+    height: 200px;
+    font-size: 1.1rem;
+  }
 
- .Interview {
-     background-color: grey;
-     color: white;
- }
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
+}
 
- .Sleeping {
-     background-color: black;
-     color: white;
- }
+/* === Responsive: Mobiles (≤ 480px) === */
+@media (max-width: 480px) {
+  .box {
+    width: 90%;
+    height: 180px;
+    font-size: 1rem;
+  }
 
- .Free {
-     background-color: blanchedalmond;
-     color: black;
- }
+  h1 {
+    font-size: 1.3rem;
+  }
 
- .box:hover {
-     transform: scale(1.05);
-     /* Slightly zooms in */
-     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-     /* Stronger shadow */
-     transition: all 0.3s ease-in-out;
-     /* Smooth animation */
-     cursor: pointer;
-     /* Pointer cursor */
- }
-
- .live{
-    height: 40px;
-    width: 40px;
-    border-radius: 25px;
-    background-color: red;
-    position-anchor: absolute;
-   top: 10px;     /* adjust as needed */
-    left: 10px;    /* place in top-left */
- }
+  h2, h3 {
+    font-size: 1rem;
+  }
+}
